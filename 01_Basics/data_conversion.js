@@ -24,7 +24,7 @@ Number/String Converted into Boolean:
 */
 
 let num1 = 33;
-let StringNumm = String(num1)
+let StringNumm = String(num1);
 console.log(typeof num1)
 console.log(typeof StringNumm)
-console.log(StringNumm);
+console.log(StringNumm)
