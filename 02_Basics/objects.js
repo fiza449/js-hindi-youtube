@@ -59,7 +59,7 @@ console.log(JsUser); //location will not be changed
 }
 */
 
-JsUser.greeting = function()
+JsUser.greeting = function() //Using function as a variable
 {
     console.log("Hello Js user");
 }
@@ -68,6 +68,6 @@ console.log(JsUser.greeting()) //Hello Js user
 
 JsUser.greetingTwo = function()
 {
-    console.log(`Hello Js user, ${this.name}`); //-> String interpolation
+    console.log(`Hello Js user, ${this.name}`); //-> String interpolation this.(any object value) is used to point out the value in objects
 }
 console.log(JsUser.greetingTwo()) //Hello Js user, Fiza
