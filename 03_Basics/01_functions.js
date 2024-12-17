@@ -47,3 +47,42 @@ console.log(addNum())// O/p: NaN
 //function usermess(username = "sam") --> Jab koi arguments paas
 // nhi honge to sam just logged in will execute or agr argument 
 // paas ho raha h to it will overwrite sam
+
+// Rest operator(...): USED When we paas more arguments than the written parameter
+
+function CalculatePrice(num1){ //only one parameter
+    return num1;
+}
+
+console.log(CalculatePrice(200,400,500)); //Passed 3 arguments
+// O/P: will be only the first one: 200 that's when we use spread operator
+
+function AddNum(...num1){
+    return num1;
+}
+console.log(AddNum(200,300,400)) // O/P: [200,300,400]
+
+//Imp question: Whats the o/p of:
+function CalculateCart(val1,val2,...num3){
+    return num3;
+}
+console.log(CalculateCart(200,300,400,500)); //O/P: [400,500]
+//val1: 200, val2: 300, ...num3: 400,500
+
+//How to handle object using function:
+
+const user = {
+     username: 'Fiza',
+     age: 19
+}
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and age is ${anyObject.age}`);
+}
+
+console.log(handleObject(user)) //Username is Fiza and age is 19
+// How to handle array with function
+const arrayName = ['a','b',2,3,'hitexh']
+function handleArray(anyArray){
+    return anyArray[4];
+}
+console.log(handleArray(arrayName)); //hitexh
