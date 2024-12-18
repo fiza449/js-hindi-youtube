@@ -1,1 +1,3 @@
-console.log("Fiza")
+
+console.log(a)
+let a = 10
