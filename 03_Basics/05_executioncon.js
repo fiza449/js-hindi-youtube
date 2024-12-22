@@ -50,7 +50,7 @@ LET'S UNDERTAND WITH THE HELP OF CODE
                   val1 <- 10
                   val2 <- 5
                   **result1** <- 15 (returned from total)
-                  **result2** <- 
+                  **result2** <- 12 (returned from total)
                   addNum --> NOW function execution context will be created for addNum(function) which includes (Memory space and Execution Phase apart from Global one to execute the function)
                              a. Memory Phase for addNum(result1):            | THIS
 for context in function addNum<- val1 -> undefined                  | FUNCTION EC WILL BE DELETED 
@@ -62,7 +62,92 @@ for context in function addNum<- val1 -> undefined                  | FUNCTION E
                                  num2(val2 hi h) <- 5
                                  total <- 15 
                                  return total (Now this total will be RETURN to GLOBAL excution phase ke result 1 ko)
+   NOW SAME FOR RESULT2 A NEW FUNCTION EC WILL BE CREATED AND RETURN THE TOTAL TO GEC EXECUTION PHASE
+      
+ CALL STACK: Follows last in first out principle
+            The call stack in JavaScript is a data structure that keeps
+            track of function calls in the order they are executed.
+            Think of it as a stack of plates: when a function is called,
+            it’s placed on top of the stack, and when the function finishes,
+            it’s removed from the top.
 
-                    
+            How the call stack works?
+         1. When your JavaScript code runs, the Global Execution Context is pushed onto the call stack.
+         2. Each time a function is called, a new Execution Context for that function is created and pushed onto the stack.
+         3. When a function finishes execution, its context is popped off the stack.
+
  */
 
+/*
+Interview questions for the above topics
+
+1. What is an execution context in JavaScript?
+
+Ans: EC is an environment in which JS code is executed. Three main components are
+     Variable environment: Holds var, functiom declarations and arguments
+     Lexical Environment: Refers to outer environment
+     this binding:Determines the value of this based on how the function is called.
+
+ 2. What are the types of execution contexts in JavaScript?
+
+ Ans: Global Execution Context (GEC): Created when the script starts executing.
+      Function Execution Context (FEC): Created whenever a function is called.
+      Eval Execution Context: Created when code inside an eval() function is executed (rarely used).
+
+ 3. What happens during the creation phase of an execution context?
+
+ Ans: The global object (window or global) is created
+      Variables declared with var are initialized to undefined.
+      Function Declarations are Fully Hoisted (Function is declared at the top so even if func is defines later in code it's already available for use)
+      The this Keyword is Set Based on the Execution Context(value of this depends on how function is called not where it's defined)
+   
+4.  What is hoisting in the context of execution?
+
+Ans: Hoisting is the process where JavaScript moves variable and function
+     declarations to the top of their scope during the creation phase of the
+     execution context.
+
+5. What does the this keyword refer to in different execution contexts?
+
+Ans: In,
+     Global Execution Context: this refers to -> Global Object ({})
+     Browser -> this refers to WINDOW
+     Node.js -> global
+     In,
+     Function Execution Context: this DEPENDS on how the function is called
+     If,
+     Called as a methods -> then OBJECT
+     Called as a standalone function -> Global object OR undefined in strict mode
+     In a constructor: then refers to newly created object
+
+ 6. What is the call stack in JavaScript?
+
+ Ans: The call stack is a data structure that tracks the order of function 
+ calls in JavaScript. It uses the Last In, First Out (LIFO)
+  principle, meaning the last function added is the first 
+  to be removed.
+
+7. What happens when a function is called in JavaScript?
+
+Ans: 1. A new Function Execution Context is created.
+     2. This execution context is pushed onto the call stack
+     3. The function executes, and when it finishes, its execution context is popped off the call stack.
+
+8. Explain the role of the call stack with an example
+
+Ans: The call stack keeps track of the execution order of functions.
+     Example:
+     neeche h
+
+9. What happens if a function calls itself?
+
+Ans: If a function calls itself, a new execution context for the function is pushed onto 
+the call stack each time it is called. Without a termination condition, this can lead to 
+a stack overflow.
+ 
+*/
+
+/*Self doubt questions:
+ 1. What's method: A method is just a function that belongs to an object. Think of it as an action that an object can perform.
+ 2. Whtat's Global Object: The global object is like a "container" for all the default things available in your JavaScript environment.
+*/
