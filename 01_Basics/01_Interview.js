@@ -95,12 +95,34 @@ Ans: 1. Using include(check if the particular is present or not. returns the o/p
      2. Using indexOf:
         console.log(str.indexOf("fun")!== -1)// true
     
-    3. What is the purpose of template literals?
+ 9. What is the purpose of template literals?
     Ans: To embed variables and expressions in a string using backticks
-    
+
+ 10. How do you check the type of a variable in JavaScript?
+    Ans: Using typeOf
+
+ 11. What happens when you declare a variable without a keyword?
+    Ans: It becomes a global variable (not recommended as it can lead to bugs).
+
+ 12. What is variable hoisting in JavaScript?
+    Ans: The process where variable and function declarations are moved to the top of their scope during the execution phase.
+
+ 13. How do you convert a string to a number?
+    Ans: Using Number:
+         let str1 = "42";
+         let str1Num = Number(str1);
+         console.log(typeof str1) //string
+         console.log(typeof str1Num); //Number
+
+ 14. What is the difference between == and ===?
+
+    Ans: ==: Compares values after type coercion.
+         ===: Compares values without type coercion (strict equality).
+ 15. How can you check if a variable is NaN?
+
+   Ans: Using isNan:
+        console.log(isNaN("Hello")); // Output: true
+
 
 */
-let first = "Hello";
-let second = "World";
-console.log(first.concat(" ",second));
-console.log(first);
+
