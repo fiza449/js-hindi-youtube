@@ -47,6 +47,6 @@ let userBooks = books.filter((bk) => {
   })
 
 userBooks = books.filter( (bk) => {
-      return bk.publish >=2000;
+      return bk.publish >=1995 && bk.genre==='History';
 })
 console.log(userBooks);
